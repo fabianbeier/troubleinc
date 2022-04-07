@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "gsap": "^3.10.2",
-    "nuxt-gsap-module": "^1.7.0"
+    "vue3-markdown-it": "^1.0.10"
   }
 }
