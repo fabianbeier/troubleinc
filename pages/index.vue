@@ -9,7 +9,7 @@ const emptyImage = ref([
   {
     src: "/image1.jpg",
     caption:
-      "The Other, 2021\n\nCopyright TROUBLE Inc.\nInkjet on CANON Pro Premium Matte, mounted on KROMA®\n81 x 61 cm\n82 x 62 cm framed, Mirogardglass\n1/5 + AP",
+      "The Other, 2021\n\nCopyright TROUBLE Inc.\nInkjet on CANON Pro Premium Matte, mounted on KROMA® \n81 x 61 cm\n82 x 62 cm framed, Mirogardglass\n1/5 + AP",
   },
   {
     src: "/image2.jpg",
@@ -196,7 +196,7 @@ definePageMeta({
           />
           <ClientOnly>
             <caption
-              class="w-full block my-2 text-center whitespace-pre text-s"
+              class="w-full block my-2 text-center  text-s"
             >
               {{
                 image.caption
@@ -217,4 +217,9 @@ body {
 .intro p {
   @apply my-3 font-sans;
 }
+
+caption {
+  white-space: pre-wrap;
+}
+
 </style>
