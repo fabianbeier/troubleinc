@@ -1,13 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "start": "node .output/server/index.mjs"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.0.2",
-    "nuxt3": "^3.0.0-27486179.cb74ab6"
+    "nuxt": "^3.0.0-rc.1"
   },
   "dependencies": {
     "gsap": "^3.10.2",

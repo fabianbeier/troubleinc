@@ -84,9 +84,9 @@ onMounted(() => {
 definePageMeta({
   pageTransition: {
     mode: "default",
-    appear: true,
   },
 });
+
 </script>
 
 <template>
@@ -107,7 +107,7 @@ definePageMeta({
             </h1>
             <p class="text-sm my-5">TROUBLE Inc.</p>
           </div>
-          <p class="text-6xl my-10">28.4 — 3.7.2022</p>
+          <p class="text-6xl my-10"><a href="#2">28.4 — 3.7.2022</a></p>
           <p>Galerie</p>
           <p>Gisela Clement</p>
           <p>Galeriehaus</p>
@@ -186,8 +186,9 @@ definePageMeta({
       <div class="w-full gap-6 p-6 overflow-hidden pointer-events-none">
         <div
           class="w-full rounded overflow-hidden images"
-          v-for="image in emptyImage"
+          v-for="(image, index) in emptyImage"
           :key="image"
+          :id="index"
         >
           <img
             :src="image.src"
@@ -196,7 +197,7 @@ definePageMeta({
           />
           <ClientOnly>
             <caption
-              class="w-full block my-2 text-center  text-s"
+              class="w-full block my-2 text-center text-s"
             >
               {{
                 image.caption
@@ -210,6 +211,10 @@ definePageMeta({
 </template>
 
 <style>
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   @apply font-bold font-sans tracking-wide leading-tight selection:text-beige-dark;
 }
